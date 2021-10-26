@@ -35,7 +35,7 @@ namespace UWP_UserControl_ViewModel.ViewModels
                 OnPropertyChanged(nameof(SearchProductID));
 
                 // filter name of each collection based on searched ID entered in bound textbox
-                // ARTICLE: convert string input into int
+                // convert string input into int
                 FilteredProducts = new ObservableCollection<Product>(products.Where(p => p.ID.ToString() == SearchProductID));
                 // when search field is cleared, return full collection
                 if (string.IsNullOrWhiteSpace(SearchProductID))
@@ -56,7 +56,7 @@ namespace UWP_UserControl_ViewModel.ViewModels
                 OnPropertyChanged(nameof(SearchProductName));
 
                 // filter name of each collection based on searched name entered in bound textbox
-                // ARTICLE: To ingnore case, search lower cases for collection and input. Contains() method checks if string contains what is typed in
+                // to ignore case, search lower cases for collection and input. Contains() method checks if string contains what is typed in
                 FilteredProducts = new ObservableCollection<Product>(products.Where(p => p.Name.ToLower().Contains(SearchProductName.ToLower())));
                 // when search field is cleared, return full collection
                 if (string.IsNullOrWhiteSpace(SearchProductName))
@@ -125,6 +125,5 @@ namespace UWP_UserControl_ViewModel.ViewModels
             // set first options list as initial selected item
             SearchProductDiscontinued = SearchDiscontinuedList.FirstOrDefault();
         }
-
     }
 }

@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewmodels="using:UWP_UserControl_ViewModel.ViewModels"
+    xmlns:usercontrols="using:UWP_UserControl.UserControls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -15,7 +16,7 @@
 
     <Grid>
         <StackPanel>
-            <Border BorderBrush="CadetBlue"  BorderThickness="1" Padding="5" HorizontalAlignment="Center">
+            <!--<Border BorderBrush="CadetBlue"  BorderThickness="1" Padding="5" HorizontalAlignment="Center">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <StackPanel>
                         <TextBlock Text="Search ID" Margin="5,0,0,0"/>
@@ -39,9 +40,11 @@
 
                     <Button Content="Clear" Command="{Binding Path=ClearCommand}" Width="100" Margin="5,19,5,0"/>
                 </StackPanel>
-            </Border>
+            </Border>-->
 
-            <ListView ItemsSource="{Binding Path=FilteredProducts, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" SelectionMode="None">
+            <usercontrols:FilterUserControl/>
+
+            <!--<ListView ItemsSource="{Binding Path=FilteredProducts, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" SelectionMode="None">
                 <ListView.HeaderTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" Margin="5">
@@ -61,7 +64,9 @@
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-            </ListView>
+            </ListView>-->
+
+            <usercontrols:CollectionUserControl/>
         </StackPanel>
     </Grid>
 </Page>
