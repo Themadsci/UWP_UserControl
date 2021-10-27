@@ -14,16 +14,16 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <StackPanel>
                     <TextBlock Text="Search ID" Margin="5,0,0,0"/>
-                    <TextBox Text="{Binding Path=SearchProductID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="100" Margin="5"/>
+                    <TextBox Text="{x:Bind Path=SearchProductID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="100" Margin="5"/>
                 </StackPanel>
 
                 <StackPanel>
                     <TextBlock Text="Search Name" Margin="5,0,0,0"/>
-                    <TextBox Text="{Binding Path=SearchProductName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="100" Margin="5"/>
+                    <TextBox Text="{x:Bind Path=SearchProductName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="100" Margin="5"/>
                 </StackPanel>
 
                 <StackPanel>
-                    <ComboBox ItemsSource="{Binding Path=SearchDiscontinuedList}" SelectedItem="{Binding Path=SearchProductDiscontinued, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="100" Margin="5,1,5,0" Header="Discontinued">
+                    <ComboBox ItemsSource="{x:Bind Path=SearchDiscontinuedList}" SelectedItem="{x:Bind Path=SearchProductDiscontinued, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="100" Margin="5,1,5,0" Header="Discontinued">
                         <ComboBox.ItemTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding}"/>
@@ -32,7 +32,7 @@
                     </ComboBox>
                 </StackPanel>
 
-                <Button Content="Clear" Command="{Binding Path=ClearCommand}" Width="100" Margin="5,19,5,0"/>
+                <Button Content="Clear" Command="{x:Bind Path=ClearCommand}" Width="100" Margin="5,19,5,0"/>
             </StackPanel>
         </Border>
     </Grid>

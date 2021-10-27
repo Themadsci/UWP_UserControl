@@ -10,7 +10,7 @@
     d:DesignWidth="400">
 
     <Grid>
-        <ListView ItemsSource="{Binding Path=FilteredProducts, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" SelectionMode="None">
+        <ListView ItemsSource="{x:Bind Path=Products, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" SelectionMode="None">
             <ListView.HeaderTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal" Margin="5">

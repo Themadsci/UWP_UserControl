@@ -42,7 +42,12 @@
                 </StackPanel>
             </Border>-->
 
-            <usercontrols:FilterUserControl/>
+            <usercontrols:FilterUserControl
+                SearchProductID="{Binding Path=SearchProductID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                SearchProductName="{Binding Path=SearchProductName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                SearchProductDiscontinued="{Binding Path=SearchProductDiscontinued, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                SearchDiscontinuedList="{Binding Path=SearchDiscontinuedList}"
+                ClearCommand="{Binding Path=ClearCommand}"/>
 
             <!--<ListView ItemsSource="{Binding Path=FilteredProducts, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" SelectionMode="None">
                 <ListView.HeaderTemplate>
@@ -66,7 +71,7 @@
                 </ListView.ItemTemplate>
             </ListView>-->
 
-            <usercontrols:CollectionUserControl/>
+            <usercontrols:CollectionUserControl Products="{Binding Path=FilteredProducts, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
     </Grid>
 </Page>
