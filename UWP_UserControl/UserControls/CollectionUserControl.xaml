@@ -16,7 +16,7 @@
                     <StackPanel Orientation="Horizontal" Margin="5">
                         <TextBlock Text="ID" Width="100" Foreground="DarkRed"/>
                         <TextBlock Text="Product Name" Width="200" Foreground="DarkRed"/>
-                        <TextBlock Text="Product Name" Width="100" Foreground="DarkRed"/>
+                        <TextBlock Text="Discontinued" Width="100" Foreground="DarkRed"/>
                     </StackPanel>
                 </DataTemplate>
             </ListView.HeaderTemplate>
